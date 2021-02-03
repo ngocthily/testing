@@ -3,7 +3,6 @@ export default ({ dispatch }) => next => action => {
     // if it does, then wait for it to resolve
     // and then create a new action with the data and dispatch it
     // if it doesn't, then send the action on to the next middleware
-    debugger
     if (!action.payload || !action.payload.then) {
         return next(action);
     }
